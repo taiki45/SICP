@@ -4,7 +4,6 @@
   (if (null? (cdr item))
     ()
     ()))
-
 (define (my-reverse item)
   (if (null? (cdr item))
     item
