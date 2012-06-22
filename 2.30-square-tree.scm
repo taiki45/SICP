@@ -1,0 +1,8 @@
+(define nil '())
+(define (my-map proc item)
+  (cond ((null? item) nil)
+        ((not (pair? item)) (proc item))
+        (else (cons (my-map proc (car item))
+                    (my-map proc (cdr item))))))
+(define (square-tree tree)
+  (my-map (lambda (x) (* x x)) tree))

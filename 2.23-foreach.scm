@@ -1,0 +1,5 @@
+(define nil '())
+(define (my-for-each proc item)
+  (cond ((null? item) #t)
+        ((not (pair? item)) (proc item))
+        (else (my-for-each proc (car item)) (my-for-each proc (cdr item)))))
