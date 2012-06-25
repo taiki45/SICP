@@ -1,0 +1,5 @@
+(define (my-equal? item1 item2)
+  (cond ((and (not (pair? item1)) (not (pair? item2)))
+         (eq? item1 item2))
+        (else (and (my-equal? (car item1) (car item2))
+                   (my-equal? (cdr item1) (cdr item2))))))
