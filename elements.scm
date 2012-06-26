@@ -17,4 +17,6 @@
   (cond ((or (null? set1) (null? set2)) '())
         ((elements-of-set? (car set1) set2)
          (union-set (cdr set1) set2))
-        (else (append (list (car set1)) (union-set (cdr set1) set2) set2))))
+        (else (append (list (car set1))
+                      (union-set (cdr set1) set2)
+                      set2))))
