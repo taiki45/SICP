@@ -1,6 +1,6 @@
 SICP
 ====
 
-answers for Structure and Interpretation of Computer Program
+Answers for Structure and Interpretation of Computer Program
 
-Gauche ~> 0.9.3.3
+REPL: Gauche ~> 0.9.3.3
