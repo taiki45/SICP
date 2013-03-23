@@ -41,3 +41,8 @@
   (if true? (eval (if-predicate exp) env)
     (eval (if-consequent exp) env)
     (eval (if-altenative exp) env)))
+
+(define (eval-sequence exps env)
+  (cond ((last-exp? exps) (eval (first-exp exps) env))
+    (else (eval (first-exp exps) env)
+          (eval-sequence (rest-exps exps) env))))
